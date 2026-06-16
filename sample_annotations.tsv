@@ -1,0 +1,5 @@
+gene	chrom	start	end	score
+geneA	chr1	100	200	0.5
+geneB	chr1	150	250	0.8
+geneC	chr2	300	400	0.7
+geneD	chr2	350	450	0.9

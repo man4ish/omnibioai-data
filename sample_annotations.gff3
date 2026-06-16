@@ -1,0 +1,4 @@
+##gff-version 3
+chr1	source	gene	100	200	.	+	.	ID=geneA;Name=GeneA
+chr1	source	gene	150	250	.	-	.	ID=geneB;Name=GeneB
+chr2	source	exon	300	400	.	+	.	ID=exon1;Parent=geneC

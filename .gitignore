@@ -1,0 +1,54 @@
+# Runtime data — not tracked
+single_cell/
+omni_object_storage/
+omni_objects/
+objects/
+igv_snapshots/
+results/
+reports/
+logs/
+cache/
+downloads/
+uploads/
+PubMed/
+reference/
+tool-images/
+omnibioai-tool-images/
+local_registry/
+data.bak/
+
+# Keep directory structure
+!**/.gitkeep
+
+# Common data file extensions
+*.bam
+*.bai
+*.vcf
+*.vcf.gz
+*.bcf
+*.cram
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bed.gz
+*.bigwig
+*.bw
+*.h5
+*.h5ad
+*.hdf5
+*.loom
+*.rds
+*.RData
+*.tar.gz
+*.zip
+*.sif
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+datasets/*
+!datasets/.gitkeep

@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "objects": {
+    "c0641777-d7bb-485e-9b81-938754e5344a": {
+      "object_id": "c0641777-d7bb-485e-9b81-938754e5344a",
+      "object_type": "gene_list",
+      "path": "",
+      "schema_version": "1.0",
+      "created_by": "dev",
+      "inputs": [],
+      "metadata": {
+        "name": "Dummy Gene List (UI test)",
+        "genes": [
+          "TP53",
+          "EGFR",
+          "BRCA1",
+          "MYC"
+        ]
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "d9a9ef66-d420-4c02-87f5-caf84db87e0e": {
+      "object_id": "d9a9ef66-d420-4c02-87f5-caf84db87e0e",
+      "object_type": "table",
+      "path": "data/objects/d9a9ef66-d420-4c02-87f5-caf84db87e0e.csv",
+      "schema_version": "1.0",
+      "created_by": "demo",
+      "inputs": [],
+      "metadata": {
+        "run_id": "run_demo_001",
+        "role": "de_results_table",
+        "label": "Demo DE table"
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "873fed0f-7d64-41b6-98b6-cfa106c9f855": {
+      "object_id": "873fed0f-7d64-41b6-98b6-cfa106c9f855",
+      "object_type": "archive",
+      "path": "data/objects/873fed0f-7d64-41b6-98b6-cfa106c9f855.gz",
+      "schema_version": "1.0",
+      "created_by": "dev",
+      "inputs": [],
+      "metadata": {
+        "label": "Dummy circTools output (tar.gz)",
+        "plugin": "circtools_runner",
+        "kind": "circtools_out",
+        "contains": [
+          "CircRNACount.txt",
+          "LinearCount.txt",
+          "CircCoordinates.txt"
+        ]
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "b3be5d09-1d69-4c72-a3f6-224e78ff13fd": {
+      "object_id": "b3be5d09-1d69-4c72-a3f6-224e78ff13fd",
+      "object_type": "table_tsv",
+      "path": "data/objects/b3be5d09-1d69-4c72-a3f6-224e78ff13fd.tsv",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "Dummy normalized circRNA table (TSV)",
+        "plugin": "circrna_postprocess",
+        "kind": "normalized_table",
+        "delimiter": "\t"
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "8dacd0b9-1038-4dca-a203-652f8bb17834": {
+      "object_id": "8dacd0b9-1038-4dca-a203-652f8bb17834",
+      "object_type": "json",
+      "path": "data/objects/8dacd0b9-1038-4dca-a203-652f8bb17834.json",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "Dummy circRNA postprocess summary (JSON)",
+        "plugin": "circrna_postprocess",
+        "kind": "summary_json"
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "a88f3e93-8627-4dde-b506-b6232d362a3b": {
+      "object_id": "a88f3e93-8627-4dde-b506-b6232d362a3b",
+      "object_type": "circrna_postprocess_bundle",
+      "path": "",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [
+        "b3be5d09-1d69-4c72-a3f6-224e78ff13fd",
+        "8dacd0b9-1038-4dca-a203-652f8bb17834"
+      ],
+      "metadata": {
+        "label": "Dummy circrna_postprocess output bundle (virtual)",
+        "plugin": "circrna_postprocess",
+        "kind": "postprocess_out",
+        "normalized_table_object_id": "b3be5d09-1d69-4c72-a3f6-224e78ff13fd",
+        "summary_object_id": "8dacd0b9-1038-4dca-a203-652f8bb17834"
+      },
+      "components": [
+        "b3be5d09-1d69-4c72-a3f6-224e78ff13fd",
+        "8dacd0b9-1038-4dca-a203-652f8bb17834"
+      ],
+      "parent_id": null
+    },
+    "99ecb2b8-5cdd-4ac7-ba32-78e8983ded9a": {
+      "object_id": "99ecb2b8-5cdd-4ac7-ba32-78e8983ded9a",
+      "object_type": "archive",
+      "path": "data/objects/99ecb2b8-5cdd-4ac7-ba32-78e8983ded9a.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM001 Space Ranger outs bundle (dummy)",
+        "sample_id": "VISIUM001",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "b5e0372c-820b-4541-ae9d-21c1ec93fa77": {
+      "object_id": "b5e0372c-820b-4541-ae9d-21c1ec93fa77",
+      "object_type": "archive",
+      "path": "data/objects/b5e0372c-820b-4541-ae9d-21c1ec93fa77.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM002 Space Ranger outs bundle (dummy)",
+        "sample_id": "VISIUM002",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "afc66ba1-5f6b-445b-b431-119c8b0db504": {
+      "object_id": "afc66ba1-5f6b-445b-b431-119c8b0db504",
+      "object_type": "archive",
+      "path": "data/objects/afc66ba1-5f6b-445b-b431-119c8b0db504.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM003 Space Ranger outs bundle (dummy)",
+        "sample_id": "VISIUM003",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "afcd2ab9-acca-46dc-b3ad-d60328258aab": {
+      "object_id": "afcd2ab9-acca-46dc-b3ad-d60328258aab",
+      "object_type": "spatial",
+      "path": "data/objects/afcd2ab9-acca-46dc-b3ad-d60328258aab.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM001 Space Ranger outs bundle (dummy)",
+        "category": "spatial",
+        "sample_id": "VISIUM001",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "b41b50b6-c633-4c15-8ccb-739eb5da070a": {
+      "object_id": "b41b50b6-c633-4c15-8ccb-739eb5da070a",
+      "object_type": "spatial",
+      "path": "data/objects/b41b50b6-c633-4c15-8ccb-739eb5da070a.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM002 Space Ranger outs bundle (dummy)",
+        "category": "spatial",
+        "sample_id": "VISIUM002",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "14ceccc1-e681-4b43-81c4-0e894cd89b09": {
+      "object_id": "14ceccc1-e681-4b43-81c4-0e894cd89b09",
+      "object_type": "spatial",
+      "path": "data/objects/14ceccc1-e681-4b43-81c4-0e894cd89b09.gz",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [],
+      "metadata": {
+        "label": "VISIUM003 Space Ranger outs bundle (dummy)",
+        "category": "spatial",
+        "sample_id": "VISIUM003",
+        "tool": "spaceranger",
+        "kind": "outs_bundle",
+        "dummy": true
+      },
+      "components": [],
+      "parent_id": null
+    },
+    "f379b38f-c050-4958-94cb-0a44a168dd79": {
+      "object_id": "f379b38f-c050-4958-94cb-0a44a168dd79",
+      "object_type": "spatial_workflow_output_json",
+      "path": "data/objects/f379b38f-c050-4958-94cb-0a44a168dd79.json",
+      "schema_version": "1.0",
+      "created_by": "dummy_generator",
+      "inputs": [
+        "afcd2ab9-acca-46dc-b3ad-d60328258aab",
+        "b41b50b6-c633-4c15-8ccb-739eb5da070a",
+        "14ceccc1-e681-4b43-81c4-0e894cd89b09"
+      ],
+      "metadata": {
+        "label": "Spatial workflow output.json (dummy) \u2014 run_id=f36072b5-4ac4-4b62-987c-189db9f177da",
+        "category": "spatial",
+        "run_id": "f36072b5-4ac4-4b62-987c-189db9f177da",
+        "engine": "nextflow",
+        "workflow_name": "spatial_visium_spaceranger_count_dummy",
+        "dummy": true,
+        "n_samples": 3
+      },
+      "components": [],
+      "parent_id": null
+    }
+  }
+}
