@@ -52,3 +52,6 @@ data.bak/
 Thumbs.db
 datasets/*
 !datasets/.gitkeep
+Abstracts/
+PDFs/
+ingest_progress.db
