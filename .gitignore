@@ -58,3 +58,5 @@ ingest_progress.db
 ingest_progress.db-journal
 Index/
 ingest_p*.db
+ingest_*.db
+ingest_*.db-journal
