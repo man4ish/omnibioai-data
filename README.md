@@ -79,6 +79,12 @@ Pre-built indexes are stored under `reference/indexes/`.
 | Salmon | All 14 organisms |
 | CellRanger (2024-A) | Human only |
 
+> **Note:** The zebrafish (GRCz11) STAR index requires ~141GB RAM
+> to build and cannot be generated on the DGX Spark (128GB).
+> Zebrafish RNA-seq users should use Salmon (available) or
+> Bowtie2 (available) for alignment. The STAR index will be
+> added post-launch when built on a higher-memory instance.
+
 ## Variant Databases
 
 Variant files are stored under `reference/variants/`.
